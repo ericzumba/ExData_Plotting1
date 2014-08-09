@@ -1,6 +1,6 @@
-x <- load("household_power_consumption.txt")
+x <- loadCached(cacheable, "household_power_consumption.txt")
 x$Global_active_power <- as.numeric(x$Global_active_power)
-png("plot1.png")
+# png("plot1.png")
 hist(
   (x$Global_active_power / 500), 
   breaks = 15, 
@@ -8,7 +8,7 @@ hist(
   col = "red", 
   main = "Global Active Power"
 )
-dev.off()
+# dev.off()
 
 
 
