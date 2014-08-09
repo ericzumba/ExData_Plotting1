@@ -13,7 +13,11 @@ loadCached <- function(cacheable, path) {
     return(c)
   }
   wow <- read.csv(path, header = T, sep = ";", stringsAsFactors = F)
+  
   c <- wow[(wow$Date == "1/2/2007" | wow$Date == "2/2/2007"), ]
+  c$Global_active_power <- as.numeric(c$Global_active_power)
+  c$DateTime <- as.POSIXct(paste(c$Date, c$Time), format="%d/%m/%Y %H:%M:%S")
+  
   cacheable$setCache(c)
   c
 }

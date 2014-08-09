@@ -1,5 +1,5 @@
+# cacheable <- makeCacheableData()
 x <- loadCached(cacheable, "household_power_consumption.txt")
-x$Global_active_power <- as.numeric(x$Global_active_power)
 # png("plot1.png")
 hist(
   (x$Global_active_power), 
