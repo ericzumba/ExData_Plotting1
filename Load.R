@@ -16,6 +16,9 @@ loadCached <- function(cacheable, path) {
   
   c <- wow[(wow$Date == "1/2/2007" | wow$Date == "2/2/2007"), ]
   c$Global_active_power <- as.numeric(c$Global_active_power)
+  c$Sub_metering_1 <- as.numeric(c$Sub_metering_1)
+  c$Sub_metering_2 <- as.numeric(c$Sub_metering_2)
+  c$Sub_metering_3 <- as.numeric(c$Sub_metering_3)
   c$DateTime <- as.POSIXct(paste(c$Date, c$Time), format="%d/%m/%Y %H:%M:%S")
   
   cacheable$setCache(c)
