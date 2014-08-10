@@ -1,7 +1,7 @@
 # cacheable <- makeCacheableData()
 x <- loadCached(cacheable, "household_power_consumption.txt")
 
-png("plot3.png")
+# png("plot3.png")
 
 par(col="black")
 plot(x$DateTime,
@@ -20,5 +20,6 @@ par(col="red")
 lines(x$DateTime, x$Sub_metering_2)
 par(col="blue")
 lines(x$DateTime, x$Sub_metering_3)
+par(col="black")
 
-dev.off()
+# dev.off()
