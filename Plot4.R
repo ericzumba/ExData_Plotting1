@@ -1,0 +1,7 @@
+png("plot4.png")
+par(mfcol = c(2, 2))
+source("Plot2.R")
+source("Plot3.R")
+source("Voltage.R")
+source("Reactive.R")
+dev.off()
